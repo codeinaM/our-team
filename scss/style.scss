@@ -1,0 +1,209 @@
+@import "normalize";
+@import "layout";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900|Roboto:400,500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+$primary: #ffcc00;
+$primary-font: "Raleway", sans-serif;
+$text-font: "Roboto", sans-serif;
+body{
+	font: 500 14px/1.7 $primary-font;
+	color: #333;
+}
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1170px;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 900;
+	font-family: $text-font;
+	line-height: 1.2;
+
+}
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+.ba-team {
+	padding-bottom: 110px;
+	text-align: center;
+	margin: 0;
+	padding-top: 0;
+	&__title {
+		text-transform: uppercase;
+		font-size: 60px;
+		color: $primary;
+		margin: 0 0 48px;
+		position: relative;
+		&:after {
+			content: "";
+			display: block;
+			width: 450px;
+			height: 1px;
+			background: $primary;
+			margin: 24px auto 0;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			background: #fff url(../img/bonfire.svg) 50% no-repeat;
+			height: 20px;
+			width: 40px;
+			transform: translate(-50%, 50%);
+		}
+	}
+	&__subtitle {
+		font-family: $primary-font;
+		letter-spacing: .02em;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 500;
+		color: #898f8f;
+		margin: 0;
+	}
+}
+.ba-team-slider {
+	display: flex;
+
+	&__content,
+	&__image  {
+		flex: 1 1 50%;
+		padding: 25px 50px 10px 65px;
+	}
+	&__content {
+		border-left: 1px solid $primary;
+		padding: 90px 68px 70px 83px;
+	}
+	&__image {
+		padding: 0 68px 0 83px;
+		display: flex;
+		align-items: center;
+		img {
+			border: 1px solid $primary;
+			display: block;
+			box-shadow: 40px 0 0 -20px #fff,
+			-40px 0 0 -20px #fff,
+			0 40px 0 -20px #fff,
+			0 -40px 0 -20px #fff;
+		}
+	}
+	&__image-border {
+		border: 1px solid $primary;
+		padding: 15px;
+	}
+}
+.ba-socials {
+	a {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		color: #ccc;
+		border: 2px solid currentColor;
+		border-radius: 50%;
+		text-align: center;
+		padding: 3.5px;
+		&:hover {
+			color: $primary;
+		}
+		svg {
+			display: inline-block;
+			width: 70%;
+			height: 70%;
+			fill: currentColor;
+
+		}
+	}
+}
+.ba-team__name {
+	font: 900 36px/1.5 $text-font;
+	color: #666;
+	letter-spacing: .3px;
+	&:after {
+			content: "";
+			display: block;
+			width: 100px;
+			height: 1px;
+			background: $primary;
+			margin: 24px auto 0;
+	}
+}
+.ba-team__position {
+	font: 400 24px/0.7 $primary-font;
+	color: #666;
+}
+.ba-button {
+	text-align: center;
+	border: 1px solid $primary;
+	text-decoration: none;
+	padding: 6px 13px;
+	font: 700 14px/0.7 'OpenSans', sans-serif;
+	color: #666;
+	margin-top: 15px;
+	&:hover {
+		background-color: $primary;
+	}
+	&:active {
+		background-color: #ccc;
+		border: none;
+	}
+}
+.ba-info:after {
+	content: "";
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: $primary;
+	margin: 24px auto 0;
+}
